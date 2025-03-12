@@ -10,4 +10,6 @@ Then use "git clone https://github.com/GAURAV-JADHAV-26/SE-2.git"
 
 Run "cd SE-2"
 
+Run "python mydb.py"  // only for first time to create a respective DB
+
 Run "python manage.py runserver"
