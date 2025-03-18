@@ -40,6 +40,14 @@ def home(request):
         return render(request, 'home.html', {'records': records}) #reply to user's request
 
 
+
+def login_user(request):
+
+
+
+    return render(request, 'login.html')
+
+
 def logout_user(request):
     logout(request)
     messages.success(request, "You have been logged out")

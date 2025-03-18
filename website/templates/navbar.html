@@ -15,6 +15,7 @@
             <a class="nav-link" href="{% url 'logout' %}">LogOut</a>
           </li>
 
+
           {% else %}
 
           <li class="nav-item">
@@ -22,11 +23,39 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
 
           {% endif %}
         </ul>
+
+
+        {% if user.is_authenticated %}
+           <ul class="nav justify-content-end navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Job Search</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Question Search</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+            </ul>
+        {% else %}
+            <ul class="nav justify-content-end navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Developers </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+
+            </ul>
+        {% endif %}
 
       </div>
     </div>
